@@ -4,14 +4,14 @@ class Configuracion {
   private rutaBaseDatos: string;
   private nivelRegistro: string;
 
-  // Constructor privado para evitar instanciación directa
+
   private constructor() {
     this.idioma = "español";
     this.rutaBaseDatos = "localhost:5432/inventario";
     this.nivelRegistro = "info";
   }
 
-  // Método estático para obtener la instancia única
+  
   public static obtenerInstancia(): Configuracion {
     if (!Configuracion.instancia) {
       Configuracion.instancia = new Configuracion();
@@ -19,7 +19,7 @@ class Configuracion {
     return Configuracion.instancia;
   }
 
-  // Métodos para obtener y actualizar las propiedades
+
   public obtenerIdioma(): string {
     return this.idioma;
   }

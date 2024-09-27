@@ -1,8 +1,9 @@
 import DispositivoEntradaFactory from "./DispositivoEntradaFactory";
 import PerifericoSalidaFactory from "./PerifericosSalidaFactory";
 
+console.log("Patron Factory Method");
+
 const main = () => {
-  // Crear dispositivos de entrada
   const teclado = DispositivoEntradaFactory.crearDispositivo("Teclado");
   const raton = DispositivoEntradaFactory.crearDispositivo("Raton");
   const scanner = DispositivoEntradaFactory.crearDispositivo("Scanner");
@@ -12,7 +13,6 @@ const main = () => {
   console.log(raton.detalles());
   console.log(scanner.detalles());
 
-  // Crear periféricos de salida
   const monitor = PerifericoSalidaFactory.crearPeriferico(
     "Monitor",
     "1920x1080",
@@ -32,8 +32,8 @@ const main = () => {
   console.log("Periféricos de salida creados:");
   console.log(monitor.detalles());
   console.log(impresora.detalles());
-  console.log(proyector.detalles());
+  console.log(proyector.detalles(),"\n");
 };
 
-// Ejecutar la función principal
+
 main();

@@ -1,4 +1,4 @@
 import './Psingleton/appSingleton'
-//import './Pfactorymethod/appFactorymethod'
-//import './Pobserver/Pobserver'
-//import './Padaptador/Padaptador'
+import './Pfactorymethod/appFactorymethod'
+import './Pobserver/appObserver'
+import './Padaptador/appAdaptador'

@@ -5,7 +5,7 @@ class ConexionDB {
   private usuario: string;
   private conectado: boolean;
 
-  // Constructor privado para evitar instanciación directa
+
   private constructor() {
     this.host = "localhost";
     this.puerto = 5432;
@@ -13,7 +13,7 @@ class ConexionDB {
     this.conectado = false;
   }
 
-  // Método estático para obtener la instancia única
+
   public static obtenerInstancia(): ConexionDB {
     if (!ConexionDB.instancia) {
       ConexionDB.instancia = new ConexionDB();
@@ -21,7 +21,7 @@ class ConexionDB {
     return ConexionDB.instancia;
   }
 
-  // Método para conectar a la base de datos
+
   public conectar(): void {
     if (!this.conectado) {
       console.log(
@@ -33,17 +33,16 @@ class ConexionDB {
     }
   }
 
-  // Método para desconectar la base de datos
   public desconectar(): void {
     if (this.conectado) {
-      console.log("Desconectando de la base de datos...");
+      console.log("Desconectando de la base de datos... \n");
       this.conectado = false;
     } else {
       console.log("No estabas conectado a la base de datos.");
     }
   }
 
-  // Métodos para actualizar la configuración de la conexión
+  
   public actualizarHost(nuevoHost: string): void {
     this.host = nuevoHost;
   }
